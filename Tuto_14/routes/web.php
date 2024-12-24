@@ -16,3 +16,11 @@ Route::get('/dashboard', function () {
 
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
+
+Route::get('/admin', function () {
+    return 'Admin Dashboard';
+})->middleware('role:admin');
+
+Route::get('/editor', function () {
+    return 'Editor Dashboard';
+})->middleware('role:editor');
