@@ -8,7 +8,7 @@ class ProductRepository
 {
     public function all()
     {
-        return Product::all(); // Get all products
+        return Product::all(); 
     }
 
 }
