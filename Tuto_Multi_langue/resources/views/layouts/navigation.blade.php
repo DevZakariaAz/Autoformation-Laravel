@@ -24,7 +24,7 @@
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                             @php
-                                $language = ["en" => "English", "fr" => "Français", "it" => "Italiano"];
+                                $language = ["en" => "English", "fr" => "Français", "it" => "Italiano", "ar" => "العربية"];
                                 $lang = Session::get('locale', 'en');
 
                                 // Fallback to 'en' if the key doesn't exist
@@ -52,6 +52,9 @@
 
                         <x-dropdown-link :href="route('lang.change', ['lang' => 'it'])">
                             Italiano
+                        </x-dropdown-link>
+                        <x-dropdown-link :href="route('lang.change', ['lang' => 'ar'])">
+                            Arabic
                         </x-dropdown-link>
                     </x-slot>
                 </x-dropdown>
